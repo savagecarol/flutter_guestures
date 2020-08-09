@@ -31,9 +31,20 @@ class _HomeState extends State<Home> {
           title: new Text('Gestures'),
           centerTitle: true,
         ),
-        body: new Center(child: GestureDetector(
+        body: new Center(child:GestureDetector(
           onTap: () {
             print('clicked');
+          },
+            onDoubleTap: () {
+            print('double tap');
+          },
+            
+                onLongPress: () {
+            print('longpress');
+          },
+
+                      onTapCancel: () {
+            print('tap cancel');
           },
 
           child:Container(
@@ -41,9 +52,10 @@ class _HomeState extends State<Home> {
             width: 100,
             padding: EdgeInsets.all(10),
             decoration: BoxDecoration(
+              color: Colors.lightBlue,
               borderRadius: BorderRadius.circular(15)
             ),
-            child:Text('click me')
+            child:Center(child: Text('click me'))
           )
         
         
